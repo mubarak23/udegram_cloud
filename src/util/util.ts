@@ -20,7 +20,7 @@ export async function filterImageFromURL(inputURL: any): Promise<string> {
         }).then(function({data: imageBuffers}){
           return Jimp.read(imageBuffers)
         })
-        const outpath =
+        const outpath: string =
         "/tmp/filtered." + Math.floor(Math.random() * 2000) + ".jpg";
         console.log(outpath)
       await photo
